@@ -1,0 +1,26 @@
+{
+  "services": [
+    {"name": "SSH",    "port": 2222, "banner": "SSH-2.0-OpenSSH_8.9p1 Ubuntu-3\r\n"},
+    {"name": "Telnet", "port": 2323, "banner": "Ubuntu 20.04 LTS\r\nlogin: "},
+    {"name": "FTP",    "port": 2121, "banner": "220 (vsFTPd 3.0.5)\r\n"},
+    {"name": "HTTP",   "port": 8080, "banner": null}
+  ],
+  "geoip": {
+    "enabled": true,
+    "provider_url": "http://ip-api.com/json/{ip}?fields=status,country,regionName,city,isp,query"
+  },
+  "telegram": {
+    "enabled": false,
+    "bot_token": "PUT_YOUR_BOT_TOKEN_HERE",
+    "chat_id": "PUT_YOUR_CHAT_ID_HERE",
+    "rate_limit_seconds": 30
+  },
+  "dashboard": {
+    "refresh_seconds": 2,
+    "max_rows": 20
+  },
+  "logging": {
+    "log_dir": "logs",
+    "log_file": "events.jsonl"
+  }
+}
